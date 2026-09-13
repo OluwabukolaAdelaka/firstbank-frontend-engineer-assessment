@@ -7,6 +7,7 @@ import type { Article } from './types/article';
 import './App.css';
 
 const PAGE_SIZE = 6;
+const MAX_PAGES = 6;
 
 //in case some articles don't have a description or content to show, skip them.
 function hasReadableText(article: Article): boolean {
@@ -49,7 +50,6 @@ function App() {
     };
   }, [page]);
 
-  const MAX_PAGES = 6;
   const totalPages = Math.min(MAX_PAGES, Math.max(1, Math.ceil(Math.min(totalResults, 100) / PAGE_SIZE)));
 
   function handlePageChange(nextPage: number) {
