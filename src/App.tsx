@@ -80,6 +80,8 @@ function App() {
               ))}
             </div>
           </>
+        ) : articles.length === 0 ? (
+          <p className="page__empty">No articles found. Please try again later.</p>
         ) : (
           <>
             <div className="article-grid">

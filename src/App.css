@@ -44,6 +44,11 @@
   color: #c41300;
 }
 
+.page__empty {
+  font-size: 14px;
+  color: #4a4a55;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
