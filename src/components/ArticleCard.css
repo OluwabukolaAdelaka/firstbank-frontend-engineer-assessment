@@ -1,0 +1,143 @@
+.article-card {
+  width: 100%;
+  max-width: 400px;
+  height: 302px;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(165, 165, 165, 0.149);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+.article-card__title {
+  margin: 0;
+  max-width: 299px;
+  padding: 1.5px 0;
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.article-card__divider {
+  height: 2px;
+  width: calc(100% + 48px);
+  margin: 20px -24px 25px;
+  border: none;
+  background: #cccccc;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.article-card__body {
+  flex: 1;
+  overflow: hidden;
+}
+
+.article-card__paragraph {
+  margin: 0;
+  max-width: 348px;
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #747373;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.article-card__paragraph--first {
+  margin-bottom: 12px;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+}
+
+.article-card__paragraph--second {
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+.article-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding-top: 14px;
+  border-top: 1px solid #ececf2;
+  font-size: 13px;
+}
+
+.article-card__footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.article-card__link {
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #4b48ff;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  white-space: nowrap;
+}
+
+.article-card__bookmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.article-card__bookmark-label {
+  position: relative;
+  top: 1px;
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #747373;
+  white-space: nowrap;
+}
+
+.article-card__star {
+  width: 14px;
+  height: 14px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.article-card__time {
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #7d7d81;
+  white-space: nowrap;
+}
+
+/* Keyed to the card's own rendered width (not the viewport) — the card
+   can be narrow either from a small screen or from sitting in a 2/3-column
+   grid row, so a container query tracks the actual constraint directly. */
+@container (max-width: 370px) {
+  .article-card__footer {
+    gap: 6px 10px;
+  }
+}
