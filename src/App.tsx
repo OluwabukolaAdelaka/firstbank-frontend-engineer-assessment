@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import ArticleCard from './components/ArticleCard';
+import ArticleCardSkeleton from './components/ArticleCardSkeleton';
 import Pagination from './components/Pagination';
 import { fetchArticles } from './api/newsApi';
 import type { Article } from './types/article';
@@ -69,7 +70,16 @@ function App() {
         {error && <p className="page__error">Couldn't load the news feed: {error}</p>}
 
         {loading ? (
-          <p className="page__status">Loading articles...</p>
+          <>
+            <p className="visually-hidden" role="status">
+              Loading articles...
+            </p>
+            <div className="article-grid">
+              {Array.from({ length: PAGE_SIZE }, (_, index) => (
+                <ArticleCardSkeleton key={index} />
+              ))}
+            </div>
+          </>
         ) : (
           <>
             <div className="article-grid">

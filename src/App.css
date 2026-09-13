@@ -39,14 +39,21 @@
   opacity: 1;
 }
 
-.page__status,
 .page__error {
   font-size: 14px;
-  color: #4a4a55;
+  color: #c41300;
 }
 
-.page__error {
-  color: #c41300;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .article-grid {
