@@ -9,7 +9,7 @@ export function truncateToLastSentence(text: string): string {
     cleaned.lastIndexOf('?'),
   );
 
- // If the sentence, is not complete, keep the "…" to show that the text was cut off.
+ //if the sentence, is not complete, keep the "…" to show that the text was cut off.
   if (lastPunctuationIndex === -1) {
     return `${cleaned}…`;
   }
