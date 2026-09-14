@@ -133,9 +133,8 @@
   white-space: nowrap;
 }
 
-/* Keyed to the card's own rendered width (not the viewport) — the card
-   can be narrow either from a small screen or from sitting in a 2/3-column
-   grid row, so a container query tracks the actual constraint directly. */
+/*Uses the card's actual width instead of the viewport width. This works whether the card is narrow because of a small screen or because it's inside a 2- or 3-column layout. */
+
 @container (max-width: 370px) {
   .article-card__footer {
     gap: 6px 10px;
