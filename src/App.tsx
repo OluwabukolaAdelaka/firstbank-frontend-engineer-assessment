@@ -65,7 +65,6 @@ function App() {
 
       <main className="page__content">
         <h1 className="page__heading">Latest news</h1>
-        <hr className="page__divider" />
 
         {error && <p className="page__error">Couldn't load the news feed: {error}</p>}
 
